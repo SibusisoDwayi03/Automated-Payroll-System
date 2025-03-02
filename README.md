@@ -29,3 +29,9 @@ This system allows companies to:
 1. Clone this repository:
    ```bash
    git clone https://github.com/<SibusisoDwayi03>/automated-payroll-system.git
+
+
+- [System Specification](SPECIFICATION.md)
+- [Context Diagram](DIAGRAM.md)
+- [Architecture Design](ARCHITECTURE.md)
+
