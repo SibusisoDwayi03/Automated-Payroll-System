@@ -1,9 +1,4 @@
-# Stakeholder Analysis Documentation
-
-## Overview
-This document provides an in-depth analysis of the key stakeholders involved in the Automated Payroll System. It outlines their roles, key concerns, pain points, and success metrics.
-
-## Stakeholder Analysis Table
+## Stakeholder Analysis Table-Automated-Payroll-System
 
 | Stakeholder        | Role                                     | Key Concerns                                 | Pain Points                                    | Success Metrics                              |
 |-------------------|--------------------------------------|--------------------------------|--------------------------------|--------------------------------|
