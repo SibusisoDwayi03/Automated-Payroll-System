@@ -51,5 +51,4 @@ This repository contains the deliverables for Assignment 8, which involve modeli
 - User stories from Assignment 6 are represented in both state and activity diagrams.
 - Sprint tasks and backlog items helped define the flow of the system in this assignment.
 
-All diagrams were created using Mermaid.js for GitHub compatibility.
 
