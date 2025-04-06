@@ -35,3 +35,21 @@ This system allows companies to:
 - [Context Diagram](DIAGRAM.md)
 - [Architecture Design](ARCHITECTURE.md)
 
+# Assignment 8: Object State & Workflow Modeling
+
+This repository contains the deliverables for Assignment 8, which involve modeling system behavior using object state diagrams and activity workflow diagrams. These diagrams trace directly to requirements and user stories from Assignments 4 through 7.
+
+## Deliverables
+
+- [`state_diagrams.md`](./state_diagrams.md): Mermaid-based state diagrams of key system objects.
+- [`activity_workflows.md`](./activity_workflows.md): Mermaid-based activity workflows for user and system interactions.
+- [`assignment8_reflection.md`](./assignment8_reflection.md): Reflection on challenges and comparison of diagram types.
+
+## Integration with Prior Work
+
+- Requirements from Assignment 4 have been translated into states and workflows.
+- User stories from Assignment 6 are represented in both state and activity diagrams.
+- Sprint tasks and backlog items helped define the flow of the system in this assignment.
+
+All diagrams were created using Mermaid.js for GitHub compatibility.
+
