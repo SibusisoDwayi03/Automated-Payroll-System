@@ -1,0 +1,16 @@
+class SystemUser:
+    def __init__(self, user_id, username, password_hash, role):
+        self._user_id = user_id
+        self._username = username
+        self._password_hash = password_hash
+        self._role = role
+
+    def login(self):
+        return f"{self._username} logged in."
+
+    def logout(self):
+        return f"{self._username} logged out."
+
+    def reset_password(self, new_hash):
+        self._password_hash = new_hash
+        return "Password reset successfully."
