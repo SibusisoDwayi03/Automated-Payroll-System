@@ -1,0 +1,15 @@
+from src.SystemUser import SystemUser
+
+class HRManager(SystemUser):
+    def __init__(self, user_id, username, password_hash, role, manager_id, name, email):
+        super().__init__(user_id, username, password_hash, role)
+        self.manager_id = manager_id
+        self.name = name
+        self.email = email
+
+    def approve_payroll(self, payroll_batch):
+        payroll_batch.status = "Approved"
+        return f"Payroll batch {payroll_batch.batch_id} approved."
+
+    def manage_employee_records(self, employee, updates):
+        return employee.update_details(**updates)

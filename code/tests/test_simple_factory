@@ -1,0 +1,9 @@
+from creational_patterns.simple_factory import UserFactory
+
+def test_create_employee():
+    user = UserFactory.create_user("employee")
+    assert user.role() == "Employee"
+
+def test_create_hr():
+    user = UserFactory.create_user("hr")
+    assert user.role() == "HR Manager"

@@ -1,0 +1,8 @@
+import copy
+
+class PayrollTemplate:
+    def __init__(self, structure):
+        self.structure = structure
+
+    def clone(self):
+        return copy.deepcopy(self)

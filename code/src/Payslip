@@ -1,0 +1,18 @@
+from datetime import date
+
+class Payslip:
+    def __init__(self, payslip_id, gross_salary, tax_amount, deductions, employee, payroll_batch):
+        self.payslip_id = payslip_id
+        self.gross_salary = gross_salary
+        self.tax_amount = tax_amount
+        self.deductions = deductions
+        self.employee = employee
+        self.payroll_batch = payroll_batch
+        self.issue_date = date.today()
+        self.net_salary = self.calculate_net_pay()
+
+    def calculate_net_pay(self):
+        return self.gross_salary - self.tax_amount - self.deductions
+
+    def print_payslip(self):
+        return f"Payslip for {self.employee.name}: Net Pay = {self.net_salary}"

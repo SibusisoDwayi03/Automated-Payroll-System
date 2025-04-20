@@ -1,0 +1,7 @@
+from creational_patterns.builder import PayslipBuilder
+
+def test_build_full_payslip():
+    builder = PayslipBuilder()
+    payslip = builder.add_base_salary().add_tax_deduction().add_overtime().build()
+    assert "Base Salary" in str(payslip)
+    assert "Overtime" in str(payslip)

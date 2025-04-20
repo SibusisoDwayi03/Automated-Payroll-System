@@ -1,0 +1,23 @@
+from abc import ABC, abstractmethod
+
+# Buttons
+class Button(ABC):
+    @abstractmethod
+    def render(self): pass
+
+class EmployeeButton(Button):
+    def render(self): return "Render Employee Button"
+
+class HRButton(Button):
+    def render(self): return "Render HR Manager Button"
+
+# GUI Factory
+class UIFactory(ABC):
+    @abstractmethod
+    def create_button(self): pass
+
+class EmployeeUIFactory(UIFactory):
+    def create_button(self): return EmployeeButton()
+
+class HRUIFactory(UIFactory):
+    def create_button(self): return HRButton()

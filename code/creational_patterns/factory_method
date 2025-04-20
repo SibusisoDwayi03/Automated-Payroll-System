@@ -1,0 +1,23 @@
+from abc import ABC, abstractmethod
+
+class PayrollProcessor(ABC):
+    @abstractmethod
+    def process(self, name: str):
+        pass
+
+class MonthlyProcessor(PayrollProcessor):
+    def process(self, name):
+        return f"Processed monthly payroll for {name}"
+
+class HourlyProcessor(PayrollProcessor):
+    def process(self, name):
+        return f"Processed hourly payroll for {name}"
+
+class ProcessorFactory:
+    def get_processor(self, processor_type):
+        if processor_type == "monthly":
+            return MonthlyProcessor()
+        elif processor_type == "hourly":
+            return HourlyProcessor()
+        else:
+            raise ValueError("Unknown payroll type.")

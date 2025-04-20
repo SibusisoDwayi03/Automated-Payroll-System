@@ -1,0 +1,20 @@
+from src.SystemUser import SystemUser
+
+class Employee(SystemUser):
+    def __init__(self, user_id, username, password_hash, role, employee_id, name, email, bank_details, tax_status):
+        super().__init__(user_id, username, password_hash, role)
+        self.employee_id = employee_id
+        self.name = name
+        self.email = email
+        self.bank_details = bank_details
+        self.tax_status = tax_status
+        self.payslips = []
+
+    def view_payslip(self):
+        return self.payslips[-1] if self.payslips else None
+
+    def update_details(self, name=None, email=None, bank_details=None):
+        if name: self.name = name
+        if email: self.email = email
+        if bank_details: self.bank_details = bank_details
+        return "Employee details updated."

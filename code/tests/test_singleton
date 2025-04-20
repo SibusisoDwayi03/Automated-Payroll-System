@@ -1,0 +1,8 @@
+from creational_patterns.singleton import AuditLogger
+
+def test_singleton_logger():
+    log1 = AuditLogger()
+    log2 = AuditLogger()
+    log1.log("Payroll approved")
+    assert log2.get_logs() == ["Payroll approved"]
+    assert log1 is log2

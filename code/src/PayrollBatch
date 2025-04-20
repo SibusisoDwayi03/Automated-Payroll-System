@@ -1,0 +1,20 @@
+from datetime import date
+
+class PayrollBatch:
+    def __init__(self, batch_id, period, status, created_on):
+        self.batch_id = batch_id
+        self.period = period
+        self.status = status
+        self.created_on = created_on
+        self.payslips = []
+
+    def generate_payslips(self, employees, tax_calculator):
+        for emp in employees:
+            payslip = emp.generate_payslip(self, tax_calculator)
+            self.payslips.append(payslip)
+        return self.payslips
+
+    def process_payroll(self):
+        if self.status.lower() != "approved":
+            return "Payroll cannot be processed until approved."
+        return f"Processed payroll for batch {self.batch_id}."

@@ -1,0 +1,7 @@
+from creational_patterns.prototype import PayrollTemplate
+
+def test_clone_template():
+    original = PayrollTemplate(["Base", "Tax", "Overtime"])
+    clone = original.clone()
+    assert original.structure == clone.structure
+    assert original is not clone

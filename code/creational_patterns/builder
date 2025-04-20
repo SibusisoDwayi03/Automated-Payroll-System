@@ -1,0 +1,25 @@
+class Payslip:
+    def __init__(self):
+        self.details = []
+
+    def __str__(self):
+        return f"Payslip: {', '.join(self.details)}"
+
+class PayslipBuilder:
+    def __init__(self):
+        self.payslip = Payslip()
+
+    def add_base_salary(self):
+        self.payslip.details.append("Base Salary")
+        return self
+
+    def add_tax_deduction(self):
+        self.payslip.details.append("Tax Deduction")
+        return self
+
+    def add_overtime(self):
+        self.payslip.details.append("Overtime")
+        return self
+
+    def build(self):
+        return self.payslip

@@ -1,0 +1,9 @@
+from creational_patterns.factory_method import ProcessorFactory
+
+def test_monthly_processor():
+    processor = ProcessorFactory().get_processor("monthly")
+    assert "monthly" in processor.process("Alice")
+
+def test_hourly_processor():
+    processor = ProcessorFactory().get_processor("hourly")
+    assert "hourly" in processor.process("Bob")

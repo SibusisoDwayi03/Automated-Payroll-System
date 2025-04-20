@@ -1,0 +1,11 @@
+from creational_patterns.abstract_factory import EmployeeUIFactory, HRUIFactory
+
+def test_employee_ui():
+    factory = EmployeeUIFactory()
+    button = factory.create_button()
+    assert "Employee" in button.render()
+
+def test_hr_ui():
+    factory = HRUIFactory()
+    button = factory.create_button()
+    assert "HR" in button.render()

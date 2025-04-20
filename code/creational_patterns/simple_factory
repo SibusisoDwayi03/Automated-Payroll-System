@@ -1,0 +1,21 @@
+class User:
+    def role(self):
+        raise NotImplementedError
+
+class Employee(User):
+    def role(self):
+        return "Employee"
+
+class HRManager(User):
+    def role(self):
+        return "HR Manager"
+
+class UserFactory:
+    @staticmethod
+    def create_user(user_type: str):
+        if user_type.lower() == "employee":
+            return Employee()
+        elif user_type.lower() == "hr":
+            return HRManager()
+        else:
+            raise ValueError("Invalid user type.")
