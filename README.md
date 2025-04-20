@@ -51,4 +51,60 @@ This repository contains the deliverables for Assignment 8, which involve modeli
 - User stories from Assignment 6 are represented in both state and activity diagrams.
 - Sprint tasks and backlog items helped define the flow of the system in this assignment.
 
+  
+# Automated Payroll System – Assignment 10
+
+## Language Choice: Python
+For the project I used Python for its readability, strong OOP support, and testability using tools like `pytest`. It aligns with the previously designed class diagram and is ideal for rapid prototyping and pattern implementation.
+
+## Project Structure
+```
+📁 Automated-Payroll-System/
+├── README.md
+├── CHANGELOG.md
+├── src/                            # Class implementations
+│   ├── system_user.py
+│   ├── employee.py
+│   ├── hr_manager.py
+│   ├── payroll_batch.py
+│   ├── payslip.py
+│   ├── tax_calculator.py
+│   └── audit_log.py
+├── creational_patterns/           # Creational design pattern implementations
+│   ├── simple_factory.py
+│   ├── factory_method.py
+│   ├── abstract_factory.py
+│   ├── builder.py
+│   ├── prototype.py
+│   └── singleton.py
+├── tests/                         # Unit tests
+│   ├── test_simple_factory.py
+│   ├── test_factory_method.py
+│   ├── test_abstract_factory.py
+│   ├── test_builder.py
+│   ├── test_prototype.py
+│   └── test_singleton.py
+```
+
+## Creational Patterns Used
+
+| Pattern           | Use Case & Justification                                                                 |
+|------------------|------------------------------------------------------------------------------------------|
+| Simple Factory    | Centralized creation of objects like vehicles (e.g., Car, Bike)                         |
+| Factory Method    | Allows extensible instantiation of different payment processors                         |
+| Abstract Factory  | Creates families of GUI elements (e.g., Buttons for Windows and MacOS)                  |
+| Builder           | Constructs complex objects like Pizza step by step with optional attributes             |
+| Prototype         | Clones existing object instances like Shape for fast memory-safe replication            |
+| Singleton         | Restricts instantiation of a class (e.g., Database connection) to a single shared object|
+
+## How to Run Tests
+Make sure you have `pytest` installed. Then run:
+```bash
+pytest tests/
+```
+
+## Author
+Sibusiso Dwayi – Assignment 10
+
+
 
