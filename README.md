@@ -102,9 +102,16 @@ Make sure you have `pytest` installed. Then run:
 ```bash
 pytest tests/
 ```
+# Automated Payroll System - Assignment 11
 
-## Author
-Sibusiso Dwayi – Assignment 10
+This extension adds persistence logic for Employee and HR Manager using repository pattern and in-memory storage. Future backend support planned via FileSystemEmployeeRepository.
+
+## Project Structure
+- src/: Domain classes
+- repositories/: Repository Interfaces and Implementations
+- factories/: Repository Factory
+- tests/: Unit Tests
+- diagrams/: Class Diagram (Mermaid.js)
 
 
 
