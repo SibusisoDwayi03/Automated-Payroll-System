@@ -1,0 +1,16 @@
+from repositories.inmemory.InMemoryPayslipRepository import InMemoryPayslipRepository
+
+class PayslipService:
+    def __init__(self):
+        self.repo = InMemoryPayslipRepository()
+
+    def generate_payslip(self, payslip):
+        # business logic (e.g., calculate deductions)
+        payslip.net_pay = payslip.base_salary - payslip.tax_deductions
+        return self.repo.save(payslip)
+
+    def get_payslip(self, payslip_id):
+        return self.repo.find_by_id(payslip_id)
+
+    def get_all_payslips(self):
+        return self.repo.find_all()

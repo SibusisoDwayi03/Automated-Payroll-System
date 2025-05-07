@@ -1,0 +1,14 @@
+from services.payroll_batch_service import PayrollBatchService
+
+class DummyBatch:
+    def __init__(self, batch_id, description, status="Pending"):
+        self.batch_id = batch_id
+        self.description = description
+        self.status = status
+
+def test_create_and_approve_batch():
+    service = PayrollBatchService()
+    batch = DummyBatch("b1", "April payroll")
+    service.create_batch(batch)
+    result = service.approve_batch("b1")
+    assert result.status == "Approved"

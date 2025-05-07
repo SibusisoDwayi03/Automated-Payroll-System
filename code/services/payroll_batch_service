@@ -1,0 +1,18 @@
+from repositories.inmemory.InMemoryPayrollBatchRepository import InMemoryPayrollBatchRepository
+
+class PayrollBatchService:
+    def __init__(self):
+        self.repo = InMemoryPayrollBatchRepository()
+
+    def create_batch(self, batch):
+        return self.repo.save(batch)
+
+    def approve_batch(self, batch_id):
+        batch = self.repo.find_by_id(batch_id)
+        if batch.status == "Approved":
+            raise ValueError("Batch already approved")
+        batch.status = "Approved"
+        return self.repo.save(batch)
+
+    def get_all_batches(self):
+        return self.repo.find_all()

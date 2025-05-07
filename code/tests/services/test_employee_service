@@ -1,0 +1,14 @@
+from services.employee_service import EmployeeService
+
+class DummyEmployee:
+    def __init__(self, employee_id, name, role, salary):
+        self.employee_id = employee_id
+        self.name = name
+        self.role = role
+        self.salary = salary
+
+def test_create_and_get_employee():
+    service = EmployeeService()
+    emp = DummyEmployee("e1", "Alice", "Manager", 10000)
+    service.create_employee(emp)
+    assert service.get_employee("e1").name == "Alice"

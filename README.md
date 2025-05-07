@@ -113,5 +113,16 @@ This extension adds persistence logic for Employee and HR Manager using reposito
 - tests/: Unit Tests
 - diagrams/: Class Diagram (Mermaid.js)
 
+## Assignment 12: Service Layer & REST API
+
+This assignment adds full API support for three core entities: Employee, Payslip, and Payroll Batch.
+
+### New Features:
+- Business logic handled in `/services/`
+- RESTful routes defined in `/api/`
+- Swagger UI auto-generated (`/docs`)
+- Unit + integration tests under `/tests/`
+
+
 
 

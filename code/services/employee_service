@@ -1,0 +1,17 @@
+from repositories.inmemory.InMemoryEmployeeRepository import InMemoryEmployeeRepository
+
+class EmployeeService:
+    def __init__(self):
+        self.repo = InMemoryEmployeeRepository()
+
+    def create_employee(self, employee):
+        return self.repo.save(employee)
+
+    def get_employee(self, employee_id):
+        return self.repo.find_by_id(employee_id)
+
+    def get_all_employees(self):
+        return self.repo.find_all()
+
+    def delete_employee(self, employee_id):
+        return self.repo.delete(employee_id)

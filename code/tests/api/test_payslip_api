@@ -1,0 +1,18 @@
+from fastapi.testclient import TestClient
+from fastapi import FastAPI
+from api.payslip_routes import router
+
+app = FastAPI()
+app.include_router(router)
+client = TestClient(app)
+
+def test_generate_payslip():
+    slip = {
+        "payslip_id": "ps1",
+        "employee_id": "e2",
+        "base_salary": 12000,
+        "tax_deductions": 3000
+    }
+    res = client.post("/api/payslips/", json=slip)
+    assert res.status_code == 200
+    assert res.json()["net_pay"] == 9000
