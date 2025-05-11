@@ -24,4 +24,17 @@ jobs:
           pip install fastapi uvicorn pytest
 
       - name: Run tests
-        run: pytest tests/
+        run: pytest code/tests/ --collect-only -v
+
+      - name: Build artifact
+        run: |
+          mkdir -p build/
+          cp -r code/ build/code/
+          echo "Automated Payroll System Build - $GITHUB_SHA" > build/version.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: payroll-build
+          path: build/
+
