@@ -46,3 +46,11 @@ uvicorn code.src.main:app --reload
 Open the API in your browser:
 
 Swagger UI → http://127.0.0.1:8000/docs
+
+---
+
+### ✅ Next Steps
+
+1. Save as `CONTRIBUTING.md`
+2. Put it in:
+
